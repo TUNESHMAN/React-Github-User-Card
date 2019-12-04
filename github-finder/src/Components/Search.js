@@ -20,10 +20,10 @@ export class Search extends Component {
   };
 
   render() {
+  
     return (
       <div>
-
-        <form className="form" onSubmit={(event)=>this.onSubmit(event)}>
+        <form className="form" onSubmit={event => this.onSubmit(event)}>
           <input
             type="text"
             placeholder="Search Users...."
@@ -37,6 +37,14 @@ export class Search extends Component {
             value="Search"
           />
         </form>
+        {this.propsshowClear && (
+          <button
+            className="btn btn-light btn-block"
+            onClick={this.props.clearUsers}
+          >
+            Clear
+          </button>
+        )}
       </div>
     );
   }

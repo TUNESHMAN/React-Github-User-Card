@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 
-class NavBar extends Component {
-  render() {
+const NavBar = ({icon, title})=> {
+   
     return (
-      <div>
+        <nav className='navbar bg-primary'>
         <h1>
-          <i className= {this.props.icon} /> {this.props.title}
+          <i className= {icon} /> {title}
         </h1>
-      </div>
+      </nav>
     );
-  }
+  
 }
 
 export default NavBar;
